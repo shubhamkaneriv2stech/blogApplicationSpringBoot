@@ -61,8 +61,6 @@ public class AuthController {
 		response.setToken(token);
 		response.setUser(modelMapper.map(userDetails, UserVo.class));
 	
-		//return ResponseEntity.status(HttpStatus.FOUND).location(URI.create("https://fullstackdeveloper.guru")).build();
-		
 		return new ResponseEntity<>(response, HttpStatus.OK);
 	}
 
