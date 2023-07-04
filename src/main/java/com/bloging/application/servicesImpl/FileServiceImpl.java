@@ -10,11 +10,13 @@ import java.nio.file.Paths;
 import java.util.UUID;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.bloging.application.services.FileService;
 
 @Service
+@Transactional
 public class FileServiceImpl implements FileService {
 
 	@Override

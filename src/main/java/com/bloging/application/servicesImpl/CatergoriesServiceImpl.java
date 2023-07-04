@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.bloging.application.dao.CategoriesDao;
 import com.bloging.application.dao.CatergoriesRepo;
@@ -16,6 +17,7 @@ import com.bloging.application.exception.ResourceNotFoundException;
 import com.bloging.application.services.CategoriesServices;
 
 @Service
+@Transactional
 public class CatergoriesServiceImpl implements CategoriesServices {
 
 	@Autowired

@@ -2,9 +2,7 @@ package com.bloging.application.servicesImpl;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.DirectoryNotEmptyException;
 import java.nio.file.Files;
-import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Date;
@@ -21,6 +19,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.bloging.application.dao.CategoriesDao;
 import com.bloging.application.dao.CatergoriesRepo;
@@ -39,6 +38,7 @@ import com.bloging.application.services.PostService;
 import com.bloging.application.util.AppContants;
 
 @Service
+@Transactional
 public class PostServiceImpl implements PostService {
 
 	@Autowired
